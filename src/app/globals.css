@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+.container {
+  @apply mx-auto px-2 sm:px-6 w-full sm:w-auto min-w-[98%] 2xl:min-w-[auto] 2xl:max-w-[1280px];
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.landing-clip-path {
+  clip-path: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)";
+}
+
+.section_sub_title {
+  @apply block mb-2 text-lg font-semibold;
+}
+
+.section_title {
+  @apply mb-4 text-3xl font-bold sm:text-4xl md:text-[40px];
+}
+
+.landing_section {
+  @apply bg-white dark:bg-gray-900 py-12 lg:py-24;
+}
+
+.landing_section2 {
+  @apply bg-gray-50 dark:bg-[#0f1523] py-12 lg:py-24;
+}
+p {
+  @apply leading-7;
+}
+
+.shadow_unset,
+.shadow_unset * {
+  box-shadow: unset !important;
+}
+
+#hero-section {
+  background: url("../../public/bangladeshisoftware-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#how-it-works {
+  @apply bg-gradient-conic from-gray-900 to-gray-950
+  /* background: linear-gradient(to right, #ee2b94, #982881); */;
+}
+
+/* Loding Boxes */
+@layer components {
+  .boxes {
+    height: 32px;
+    width: 32px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    margin-top: 32px;
+    -webkit-transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg)
+      translateZ(0px);
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+  }
+  .boxes .box {
+    width: 32px;
+    height: 32px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .boxes .box:nth-child(1) {
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    -webkit-animation: box1 1s linear infinite;
+    animation: box1 1s linear infinite;
+  }
+  .boxes .box:nth-child(2) {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-animation: box2 1s linear infinite;
+    animation: box2 1s linear infinite;
+  }
+  .boxes .box:nth-child(3) {
+    -webkit-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+    -webkit-animation: box3 1s linear infinite;
+    animation: box3 1s linear infinite;
+  }
+  .boxes .box:nth-child(4) {
+    -webkit-transform: translate(200%, 0);
+    transform: translate(200%, 0);
+    -webkit-animation: box4 1s linear infinite;
+    animation: box4 1s linear infinite;
+  }
+
+  .boxes .box > div {
+    background: #5c8df6;
+    --translateZ: 15.5px;
+    --rotateY: 0deg;
+    --rotateX: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #5c8df6;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: rotateY(var(--rotateY)) rotateX(var(--rotateX))
+      translateZ(var(--translateZ));
+    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX))
+      translateZ(var(--translateZ));
+  }
+
+  .boxes .box > div:nth-child(1) {
+    top: 0;
+    left: 0;
+    background: #5c8df6;
+  }
+  .boxes .box > div:nth-child(2) {
+    background: #145af2;
+    right: 0;
+    --rotateY: 90deg;
+  }
+  .boxes .box > div:nth-child(3) {
+    background: #447cf5;
+    --rotateX: -90deg;
+  }
+  .boxes .box > div:nth-child(4) {
+    background: #dbe3f4;
+    top: 0;
+    left: 0;
+    --translateZ: -90px;
+  }
+
+  @keyframes box1 {
+    0%,
+    50% {
+      transform: translate(100%, 0);
+    }
+    100% {
+      transform: translate(200%, 0);
+    }
+  }
+
+  @keyframes box2 {
+    0% {
+      transform: translate(0, 100%);
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
+
+  @keyframes box3 {
+    0%,
+    50% {
+      transform: translate(100%, 100%);
+    }
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+
+  @keyframes box4 {
+    0% {
+      transform: translate(200%, 0);
+    }
+    50% {
+      transform: translate(200%, 100%);
+    }
+    100% {
+      transform: translate(100%, 100%);
+    }
+  }
+}
