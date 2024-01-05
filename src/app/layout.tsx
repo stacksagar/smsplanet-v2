@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "YEN:SMS Verification",
+  title: "SMSPlanet Verification",
   description: "Text Verification Web Application",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta name="cryptomus" content="e5aaf612" />
+      <meta name="cryptomus" content="2c6a3f59" />
 
       <body
         className={
