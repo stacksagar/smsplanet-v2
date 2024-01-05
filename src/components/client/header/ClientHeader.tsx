@@ -66,6 +66,7 @@ export default function ClientHeader(props: Props) {
   return (
     <header>
       <CssBaseline />
+
       <AppBar
         component="nav"
         color="inherit"
