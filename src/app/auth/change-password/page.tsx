@@ -34,6 +34,7 @@ export default function ChangePassword() {
 
         toast({ message: "Password updated!" });
       } catch (error) {
+        console.log("error ", error);
         toast({ message: error_message(error), type: "error" });
       }
     },

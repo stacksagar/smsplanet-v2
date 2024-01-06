@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta name="cryptomus" content="2c6a3f59" />
+      <meta name="cryptomus" content="bfd668ee" />
 
       <body
         className={
