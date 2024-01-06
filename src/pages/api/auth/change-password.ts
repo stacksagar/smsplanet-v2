@@ -26,6 +26,8 @@ export default async function SIGNUP(
 
     return res.status(200).json({ message: "Password updated.", user });
   } catch (error) {
-    return res.status(500).json({ message: error_message(error) });
+    return res
+      .status(500)
+      .json({ message: error_message(error) || "something wrong!" });
   }
 }
