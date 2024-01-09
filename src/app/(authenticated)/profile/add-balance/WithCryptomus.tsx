@@ -35,7 +35,7 @@ export default function WithCryptomus() {
             payable_amount: amount.value.toString(),
             userId: user._id,
           },
-          url_success: "https://smsplanet.com/profile/wallet",
+          url_success: "https://smsplanet.net/profile/wallet",
         }
       );
 
