@@ -16,7 +16,7 @@ export default function TermsAndService() {
             General Use
           </h3>
           <p className="text-base leading-relaxed text-body-color">
-            Games-TopUp website is intended for use by individuals who are 18
+            SMSPlanet website is intended for use by individuals who are 18
             years of age or older. By using the website, you represent and
             warrant that you are at least 18 years of age.
           </p>
@@ -40,9 +40,9 @@ export default function TermsAndService() {
           </h3>
           <p className="text-base leading-relaxed text-body-color">
             All content on the website, including but not limited to text,
-            graphics, logos, images, and software, is the property of
-            Games-TopUp or its licensors and is protected by copyright,
-            trademark, and other intellectual property laws.
+            graphics, logos, images, and software, is the property of SMSPlanet
+            or its licensors and is protected by copyright, trademark, and other
+            intellectual property laws.
           </p>
         </div>
         <div>
@@ -51,9 +51,9 @@ export default function TermsAndService() {
           </h3>
           <p className="text-base leading-relaxed text-body-color">
             All content on the website, including but not limited to text,
-            graphics, logos, images, and software, is the property of
-            Games-TopUp or its licensors and is protected by copyright,
-            trademark, and other intellectual property laws.
+            graphics, logos, images, and software, is the property of SMSPlanet
+            or its licensors and is protected by copyright, trademark, and other
+            intellectual property laws.
           </p>
         </div>
         <div>
@@ -71,7 +71,7 @@ export default function TermsAndService() {
             Limitation of Liability
           </h3>
           <p className="text-base leading-relaxed text-body-color">
-            Games-TopUp will not be liable for any damages of any kind arising
+            SMSPlanet will not be liable for any damages of any kind arising
             from the use of the website, including but not limited to direct,
             indirect, incidental, punitive, and consequential damages.
           </p>
@@ -81,11 +81,10 @@ export default function TermsAndService() {
             Indemnification
           </h3>
           <p className="text-base leading-relaxed text-body-color">
-            You agree to indemnify, defend, and hold harmless Games-TopUp and
-            its affiliates, officers, directors, employees, agents, and
-            licensors from any claim or demand, including reasonable attorneys`
-            fees, made by any third party due to or arising out of your use of
-            the website.
+            You agree to indemnify, defend, and hold harmless SMSPlanet and its
+            affiliates, officers, directors, employees, agents, and licensors
+            from any claim or demand, including reasonable attorneys` fees, made
+            by any third party due to or arising out of your use of the website.
           </p>
         </div>
         <div>
@@ -93,8 +92,8 @@ export default function TermsAndService() {
             Modification of Terms
           </h3>
           <p className="text-base leading-relaxed text-body-color">
-            Games-TopUp reserves the right to modify these terms and conditions
-            at any time without prior notice. Your continued use of the website
+            SMSPlanet reserves the right to modify these terms and conditions at
+            any time without prior notice. Your continued use of the website
             after any such modifications shall constitute your acceptance of the
             revised terms.
           </p>
@@ -105,13 +104,13 @@ export default function TermsAndService() {
           </h3>
           <p className="text-base leading-relaxed text-body-color">
             These terms and conditions shall be governed by and construed in
-            accordance with the laws of the jurisdiction in which Games-TopUp is
+            accordance with the laws of the jurisdiction in which SMSPlanet is
             located, without giving effect to any principles of conflicts of
             law.
           </p>
         </div>
         <p className="text-base leading-relaxed text-body-color">
-          Thank you for using Games-TopUp website. If you have any questions or
+          Thank you for using SMSPlanet website. If you have any questions or
           concerns about these terms and conditions, please contact us.
         </p>
         <br />
