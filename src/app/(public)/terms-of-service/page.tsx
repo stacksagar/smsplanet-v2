@@ -36,17 +36,6 @@ export default function TermsAndService() {
 
         <div>
           <h3 className="m-0 mb-4 text-2xl font-semibold text-dark sm:text-2xl">
-            ntellectual Property
-          </h3>
-          <p className="text-base leading-relaxed text-body-color">
-            All content on the website, including but not limited to text,
-            graphics, logos, images, and software, is the property of SMSPlanet
-            or its licensors and is protected by copyright, trademark, and other
-            intellectual property laws.
-          </p>
-        </div>
-        <div>
-          <h3 className="m-0 mb-4 text-2xl font-semibold text-dark sm:text-2xl">
             Intellectual Property
           </h3>
           <p className="text-base leading-relaxed text-body-color">
