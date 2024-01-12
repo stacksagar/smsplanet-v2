@@ -11,8 +11,10 @@ import axios from "axios";
 import toast from "@/lib/toast";
 import error_message from "@/lib/error_message";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function NewPasswordForm() {
+  const router = useRouter();
   const params = useSearchParams();
   const formik = useFormik({
     initialValues: {
@@ -31,6 +33,7 @@ export default function NewPasswordForm() {
           message: "Password upodated!",
           type: "success",
         });
+        router.push("/auth/signin");
       } catch (error) {
         toast({
           message: error_message(error),

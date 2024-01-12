@@ -23,10 +23,6 @@ export default async function SETPassword(
       },
       {
         $set: { password: hashed_password, token: "" },
-      },
-
-      {
-        new: true,
       }
     );
 

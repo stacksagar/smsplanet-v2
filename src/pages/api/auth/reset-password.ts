@@ -19,14 +19,8 @@ export default async function ResetPassword(
       },
       {
         $set: { token },
-      },
-
-      {
-        new: true,
       }
     );
-
-    console.log("user ", user);
 
     await transporter.sendMail({
       to: email,
