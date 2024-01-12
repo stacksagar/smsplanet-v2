@@ -17,8 +17,9 @@ interface UserT extends ModelCommonAttributes {
   password: string;
   image?: string;
   role: Roles;
-  banned?:boolean;
+  banned?: boolean;
   favorite_services?: SMSService[];
+  token?: string;
 }
 
 interface SettingT extends ModelCommonAttributes {

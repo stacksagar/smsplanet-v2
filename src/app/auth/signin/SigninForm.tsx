@@ -4,7 +4,6 @@ import toast from "@/lib/toast";
 import error_message from "@/lib/error_message";
 import { Checkbox } from "@mui/material";
 import { signIn } from "next-auth/react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { useFormik } from "formik";
@@ -15,8 +14,12 @@ import AuthPageLayout from "@/components/AuthPageLayout";
 import { all_fields_required } from "@/validations/formik_validations";
 import { useAuth } from "@/context/AuthProvider";
 import WarningText from "@/common/WarningText";
+import GoogleReCAPTCHA from "react-google-recaptcha";
+import useString from "@/hooks/state/useString";
 
 export default function SigninForm() {
+  const captcha_token = useString("");
+
   const router = useRouter();
   const { error, setError } = useAuth();
 
@@ -29,6 +32,7 @@ export default function SigninForm() {
     validate: all_fields_required,
 
     onSubmit: async (values) => {
+      if (!captcha_token.value) return;
       try {
         const data = await signIn("credentials", {
           email: values.email,
@@ -103,8 +107,18 @@ export default function SigninForm() {
             Trust This Device
           </label>
         </div>
+
+        <GoogleReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+          onChange={(t) => captcha_token.setCustom(t || "")}
+        />
+
         <div className="w-full sm:w-fit">
-          <MuiButton loading={formik.isSubmitting} type="submit">
+          <MuiButton
+            disabled={!captcha_token.value}
+            loading={formik.isSubmitting}
+            type="submit"
+          >
             Signin
           </MuiButton>
         </div>

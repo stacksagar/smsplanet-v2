@@ -10,22 +10,25 @@ import { all_fields_required } from "@/validations/formik_validations";
 import axios from "axios";
 import toast from "@/lib/toast";
 import error_message from "@/lib/error_message";
+import { useSearchParams } from "next/navigation";
 
-export default function ForgotPasswordForm() {
+export default function NewPasswordForm() {
+  const params = useSearchParams();
   const formik = useFormik({
     initialValues: {
-      email: "",
+      password: "",
     },
 
     validate: all_fields_required,
 
     onSubmit: async (values) => {
       try {
-        await axios.post(`/api/auth/reset-password`, {
-          email: values.email,
+        await axios.post(`/api/auth/set-password`, {
+          password: values.password,
+          token: params?.get("token"),
         });
         toast({
-          message: "Reset email sent!",
+          message: "Password upodated!",
           type: "success",
         });
       } catch (error) {
@@ -49,16 +52,16 @@ export default function ForgotPasswordForm() {
 
         <MuiTextField
           required={true}
-          label="Email"
-          type="email"
-          {...formik.getFieldProps("email")}
-          touched={formik.touched.email}
-          error={formik.errors.email}
+          label="New Password"
+          type="password"
+          {...formik.getFieldProps("password")}
+          touched={formik.touched.password}
+          error={formik.errors.password}
         />
 
         <div className="w-full sm:w-fit">
           <MuiButton loading={formik.isSubmitting} type="submit">
-            Reset Password
+            Update Password
           </MuiButton>
         </div>
 

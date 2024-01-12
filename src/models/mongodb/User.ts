@@ -16,6 +16,7 @@ const userSchema = new mdb.Schema<UserT>(
       enum: ["user", "mode", "admin"],
       default: "user",
     },
+    token: String,
   },
   {
     timestamps: true,
