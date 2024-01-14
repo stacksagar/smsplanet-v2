@@ -30,6 +30,7 @@ export default async function ResetPassword(
 
     return res.status(201).json({ message: "Reset email sent!" });
   } catch (error) {
+  console.log("error ", error)
     return res.status(500).json({ message: error_message(error) });
   }
 }
